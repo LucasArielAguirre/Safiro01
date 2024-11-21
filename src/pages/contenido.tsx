@@ -19,13 +19,13 @@ const Contenido = () => {
 
         <div className="w-full h-[60px] flex flex-row justify-center items-center bg-neutral-900/10 rounded-b-lg gap-4 text-sm sm:text-base">
         <a
-            className="hover:scale-105 border border-gray-600/30 py-2 px-2 rounded-full hover:shadow-sm hover:shadow-purple-800"
+            className="hover:scale-105 border border-gray-600/30 py-2 px-2 rounded-full hover:shadow-sm hover:shadow-purple-800 animate-pulse"
             href="https://www.twitch.tv/safiro01"
             target="_blank"
           >
            <svg xmlns="http://www.w3.org/2000/svg" width="1.96em" height="1.5em" viewBox="0 0 256 268"><path fill="#5a3e85" d="M17.458 0L0 46.556v186.201h63.983v34.934h34.931l34.898-34.934h52.36L256 162.954V0zm23.259 23.263H232.73v128.029l-40.739 40.741H128L93.113 226.92v-34.886H40.717zm64.008 116.405H128V69.844h-23.275zm63.997 0h23.27V69.844h-23.27z"/></svg>
           </a>
-          <a href="https://kick.com/safiro" target="_blank" className="hover:scale-105 border border-gray-600/30 py-2 px-2 rounded-full hover:shadow-sm hover:shadow-green-800 flex items-center">
+          <a href="https://kick.com/safiro" target="_blank" className="hover:scale-105 border border-gray-600/30 py-2 px-2 rounded-full hover:shadow-sm hover:shadow-green-800 flex items-center animate-pulse">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"
@@ -50,7 +50,7 @@ const Contenido = () => {
         <div className="w-full h-[200px] sm:h-[300px] md:h-[400px] bg-[url('/shots-banner2.png')] bg-cover bg-center border border-purple-950">
         </div>
         <div className="w-full h-[60px] flex flex-row justify-center items-center bg-neutral-900/10 rounded-b-lg gap-4 text-sm sm:text-base py-5">
-        <a href="https://www.youtube.com/@SafiroVLR" target="_blank" className="hover:scale-105 border border-gray-600/30 py-2 px-2 rounded-full hover:shadow-sm hover:shadow-red-800">
+        <a href="https://www.youtube.com/@SafiroVLR" target="_blank" className="hover:scale-105 border border-gray-600/30 py-2 px-2 rounded-full hover:shadow-sm hover:shadow-red-800 animate-pulse">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"

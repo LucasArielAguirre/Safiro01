@@ -26,13 +26,13 @@ const AgentSelection: React.FC = () => {
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen w-full md:w-auto overflow-hidden ">
-      <h1 className="absolute font-textbask text-center justify-center align-middle w-full text-xl md:text-5xl text-purple-600/80 font-extralight ">
+      <h1 className="absolute font-textbask text-center justify-center align-middle w-full text-xl md:text-5xl text-gray-100 font-extralight underline decoration-double decoration-purple-700 ">
         SPEEDRUNS CON AGENTES
       </h1>
 
       <motion.div 
         className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3 p-4 w-[80%] 
-        md:w-2/5 lg:w-1/3 bg-zinc-900 bg-opacity-20 backdrop-blur-lg shadow-lg 
+        md:w-2/5 lg:w-1/3 bg-zinc-900 backdrop-blur-lg shadow-lg 
         md:m-10 lg:m-16 shadow-black rounded-2x justify-center items-center align-middle m-auto"
       >
         {agentes.map((agent) => (
@@ -65,7 +65,7 @@ const AgentSelection: React.FC = () => {
 
       <article className="flex-1 p-6 m-auto justify-center align-middle items-center font-textbask overflow-hidden">
         {selectedAgent ? (
-          <div className="bg-white/10 bg-opacity-20 p-6 rounded-xl shadow-lg text-white text-center">
+          <div className="bg-zinc-950 border border-white p-6 rounded-xl shadow-lg text-white text-center font-textbask">
             <h2 className="text-3xl font-bold mb-6 uppercase">
               Estadísticas con <span className="text-purple-600">{selectedAgent.name}</span>
             </h2>
