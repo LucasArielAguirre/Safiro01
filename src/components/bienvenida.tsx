@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react"
+import Typewriter from "typewriter-effect";
 
 const Bienvenida = () => {
   return (
@@ -21,19 +22,31 @@ const Bienvenida = () => {
         </motion.div>
 
         <motion.div
-        initial={{ opacity: 0, x: -300, rotate: 80 }}
-        animate={{ opacity: 1, x: 0, rotate: 0 }}
-        whileDrag={{ scale: 0.9, rotate: 10 }}
-        drag="x"
-        dragConstraints={{ left: 0, right: 300 }}
-        transition={{ duration: 0.5 }}
-        className="col-span-2 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/10 shadow-black">
-          <h2 className="text-lg mt-2 font-textbask text-center uppercase text-purple-500">Streamer De Valorant</h2>
-          <p className="text-base text-gray-400 mt-2 font-textbask">
-            Bienvenido a nuestra comunidad. Aquí encontrarás directos épicos,
-            contenido exclusivo y una comunidad increíble. ¡Súmate!
-          </p>
-        </motion.div>
+  initial={{ opacity: 0, x: -300, rotate: 80 }}
+  animate={{ opacity: 1, x: 0, rotate: 0 }}
+  whileDrag={{ scale: 0.9, rotate: 10 }}
+  drag="x"
+  dragConstraints={{ left: 0, right: 300 }}
+  transition={{ duration: 0.5 }}
+  className="overflow-x-hidden col-span-2 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/10 shadow-black"
+>
+  <h2 className="text-lg mt-2 font-textbask text-center uppercase text-purple-500">
+    Streamer De Valorant
+  </h2>
+  <p className="text-sm md:text-base text-gray-400 mt-2 font-textbask">
+    <Typewriter
+      options={{
+        strings: [
+          " Bienvenido a nuestra comunidad. Aquí encontrarás directos con contenido exclusivo y una comunidad increíble. ¡Súmate! ",
+          " Realizo Speedruns del rango mas bajo al más alto en valorant, con agentes especificos y hasta en otras regiones."
+        ],
+        autoStart: true,
+        loop: true,
+        delay: 45,
+      }}
+    />
+  </p>
+</motion.div>
         <motion.div
         initial={{ opacity: 0, x: 300, rotate: -80 }}
         animate={{ opacity: 1, x: 0, rotate: 0 }}
@@ -41,7 +54,7 @@ const Bienvenida = () => {
          drag="x"
          dragConstraints={{ left:-300, right: 0 }}
          transition={{ duration: 0.5 }}
-        className="col-span-2 bg-blue-600 bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/10 shadow-black">
+        className="overflow-x-hidden col-span-2 bg-blue-600 bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/10 shadow-black">
           <h1 className="text-4xl font-bold text-white text-center font-textbask">Safiro01</h1>
           <div className="w-full flex justify-center">
       <img
