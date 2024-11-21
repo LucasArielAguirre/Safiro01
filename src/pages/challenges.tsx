@@ -116,7 +116,7 @@ const AgentSelection: React.FC = () => {
                   <a
                     target="_blank"
                     referrerPolicy="no-referrer"
-                    className="text-red-700 hover:text-red-500 transition-all animate-pulse delay-200"
+                    className="text-purple-500 hover:text-purple-800 transition-all animate-pulse delay-200"
                     href={
                       selectedAgent.stats
                         ? selectedAgent.stats[0].link
