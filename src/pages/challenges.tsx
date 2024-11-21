@@ -28,11 +28,11 @@ const AgentSelection: React.FC = () => {
         SPEEDRUNS CON AGENTES
       </h1> 
 
-      {/* Contenedor de selección de agentes */}
+
       <motion.div 
         className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3 p-4 w-[80%] 
         md:w-2/5 lg:w-1/3 bg-gray-300/10 bg-opacity-20 backdrop-blur-lg shadow-lg 
-        md:m-10 lg:m-16 shadow-purple-400 rounded-2x justify-center items-center align-middle m-auto"
+        md:m-10 lg:m-16 shadow-purple-200 rounded-2x justify-center items-center align-middle m-auto"
       >
         {agentes.map((agent) => (
           <motion.div
@@ -62,7 +62,7 @@ const AgentSelection: React.FC = () => {
         ))}
       </motion.div>
 
-      {/* Panel de detalles del agente */}
+
       <article className="flex-1 p-6 m-auto justify-center align-middle items-center font-textbask overflow-hidden  ">
         {selectedAgent ? (
           <div className="bg-gray-800 bg-opacity-20 p-6 rounded-xl shadow-lg text-white text-center">
@@ -88,7 +88,7 @@ const AgentSelection: React.FC = () => {
                     ? selectedAgent.stats[0].winandloss
                     : "N/A"}
                 </p>
-                <p>
+                <p> 
                   K/D:{" "}
                   {selectedAgent.stats ? selectedAgent.stats[0].kd : "N/A"}
                 </p>

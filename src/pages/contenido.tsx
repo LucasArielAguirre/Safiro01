@@ -3,8 +3,10 @@ import { motion, LayoutGroup } from "framer-motion";
 const Contenido = () => {
   return (
    <section className="flex flex-col text-white w-full h-full items-center justify-center font-textbask px-4">
+
       <LayoutGroup> 
-      <h1 className="text-3xl md:text-5xl text-center mb-6">¿DÓNDE ENCONTRARME?</h1>
+        <h1 className="text-3xl md:text-5xl text-center mb-6">¿DÓNDE ENCONTRARME?</h1>
+        
       <motion.article 
      layoutId="item" 
      initial = {{ opacity: 0, scale: 0.4 }}
@@ -37,7 +39,7 @@ const Contenido = () => {
         </div>
       </motion.article>
 
-      {/* Segundo artículo */}
+
       <motion.article 
       initial = {{ opacity: 0, scale: 0.4 }}
       animate = {{ opacity: 1, scale: 1 }}
