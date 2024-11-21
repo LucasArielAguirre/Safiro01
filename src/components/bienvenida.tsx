@@ -7,23 +7,22 @@ const Bienvenida = () => {
     className="w-full h-full flex items-center justify-center text-white p-4 ">
       <AnimatePresence>
       <motion.div 
-        initial={{ x: -200 }}
-        animate={{ x: 0  }} 
-        transition={{ type: "spring" }}
         className="grid grid-cols-4 md:grid-cols-4 gap-4 max-w-xl w-full h-auto">
         <motion.div 
           whileDrag={{ scale: 0.9, rotate: 0 }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          initial={{ x: -200 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity:0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
           className="col-span-4 md:col-span-4 h-40 md:h-56 rounded-lg flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-lg shadow-md shadow-purple-500 border border-white/20"
           style={{ backgroundImage: 'url(banner.jpeg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
         </motion.div>
 
         <motion.div
+        initial={{ opacity: 0, x: -300, rotate: 80 }}
+        animate={{ opacity: 1, x: 0, rotate: 0 }}
         whileDrag={{ scale: 0.9, rotate: 10 }}
         drag="x"
         dragConstraints={{ left: 0, right: 300 }}
@@ -36,6 +35,8 @@ const Bienvenida = () => {
           </p>
         </motion.div>
         <motion.div
+        initial={{ opacity: 0, x: 300, rotate: -80 }}
+        animate={{ opacity: 1, x: 0, rotate: 0 }}
          whileDrag={{ scale: 0.9, rotate: 10 }}
          drag="x"
          dragConstraints={{ left:-300, right: 0 }}
@@ -53,6 +54,8 @@ const Bienvenida = () => {
 
   
         <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+        animate={{ opacity: 1, x: 0 }}
            whileDrag={{ scale: 0.9, rotate: 10 }}
            drag="x"
            dragConstraints={{ right:0, left: 0 }}
