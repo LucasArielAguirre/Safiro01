@@ -77,7 +77,7 @@ const AgentSelection: React.FC = () => {
               />
               <div className="mt-4 md:mt-0 text-left">
                 <p className="text-xl">
-                  NOMBRE DE LA CUENTA:{" "}
+                  Nombre de la cuenta:{" "}
                   {selectedAgent.stats
                     ? selectedAgent.stats[0].nameaccount
                     : "N/A"}
@@ -90,17 +90,17 @@ const AgentSelection: React.FC = () => {
                 </p>
                 <p>
                   K/D:{" "}
-                  {selectedAgent.stats ? selectedAgent.stats[0].kd : "N/A"}
+                  {selectedAgent.stats ? ( <NumberFlow value={selectedAgent.stats[0].kd} />): ("N/A")}
                 </p>
                 <p>
                   HS:{" "}
-                  {selectedAgent.stats ? selectedAgent.stats[0].hs : "N/A"}
+                  {selectedAgent.stats ? (<NumberFlow value={selectedAgent.stats[0].hs} />): ("N/A")}
                 </p>
                 <p>
                   Winrate:{" "}
                   {selectedAgent.stats
-                    ? selectedAgent.stats[0].winrate
-                    : "N/A"}
+                    ? (<NumberFlow value={selectedAgent.stats[0].winrate} />)
+                    : ("N/A")}
                   %
                 </p>
                 <p>

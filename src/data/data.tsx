@@ -27,12 +27,12 @@ export const agentes: Agente[] = [
     stats: [
       {
         id: 1,
-        nameaccount: "Clove",
+        nameaccount: "mCLOVEn #0000",
         img_agent: "/clove-select.webp",
-        winandloss: "82W/100L",
-        kd: 10,
-        hs: 10,
-        winrate: 10,
+        winandloss: "36W/6L",
+        kd: 1.45,
+        hs: 32,
+        winrate: 86,
         hours: 10,
         link: "https://www.youtube.com/watch?v=jf_tCPfiAj4&list=PLr5KJK8LrPy7-ggIz-etDSNGum56axm2q"
       },
@@ -46,13 +46,13 @@ export const agentes: Agente[] = [
     stats: [
       {
         id: 2,
-        nameaccount: "vyze",
+        nameaccount: "SOY VYSEXUAL#LOLAA",
         img_agent: "/vyze-select.webp",
-        winandloss: "82W/100L",
-        kd: 10,
-        hs: 10,
-        winrate: 10,
-        hours: 10,
+        winandloss: "65W/18L",
+        kd: 1.94,
+        hs: 37.3,
+        winrate: 77.4,
+        hours: 42,
         link: "https://www.youtube.com/watch?v=cS9CbZwZHw8&list=PLr5KJK8LrPy6B4k5ecak9Whe3P6C6nHBK&pp=iAQB"
       },
     ],
@@ -65,13 +65,13 @@ export const agentes: Agente[] = [
     stats: [
       {
         id: 3,
-        nameaccount: "yoru",
+        nameaccount: "XxSAFIROPROYTxX#8726",
         img_agent: "/yoru-select.webp",
-        winandloss: "82W/100L",
-        kd: 10,
-        hs: 10,
-        winrate: 10,
-        hours: 10,
+        winandloss: "65W/17L",
+        kd: 1.86,
+        hs: 39.4,
+        winrate: 79.5,
+        hours: 41,
         link: "https://www.youtube.com/watch?v=Qqe91a-GMpM&list=PLr5KJK8LrPy6GN0n6SCL4QRlcfd8_v1CW&pp=iAQB"
       },
     ],
@@ -84,13 +84,13 @@ export const agentes: Agente[] = [
     stats: [
       {
         id: 4,
-        nameaccount: "iso",
+        nameaccount: "guISO D lentejas#rico",
         img_agent: "/iso-select.webp",
-        winandloss: "82W/100L",
-        kd: 10,
-        hs: 10,
-        winrate: 10,
-        hours: 10,
+        winandloss: "55W/17L",
+        kd: 1.69,
+        hs: 33.2,
+        winrate: 76.7,
+        hours: 36,
         link: "https://www.youtube.com/watch?v=OW6f4EvLSsc&list=PLr5KJK8LrPy6RZ50F9XzAserOwyoKcVdO"
       },
     ],
@@ -103,13 +103,13 @@ export const agentes: Agente[] = [
     stats: [
       {
         id: 5,
-        nameaccount: "deadlock",
+        nameaccount: "No info",
         img_agent: "/deadlock-select.webp",
-        winandloss: "82W/100L",
-        kd: 10,
-        hs: 10,
-        winrate: 10,
-        hours: 10,
+        winandloss: "60W/21L",
+        kd: 1.64,
+        hs: 35.2,
+        winrate: 74.4,
+        hours: 42,
         link: "https://www.youtube.com/watch?v=vQKf2fpdvt4&list=PLr5KJK8LrPy73In3F5ulaEIKRPyfXAeXf"
       },
     ],
