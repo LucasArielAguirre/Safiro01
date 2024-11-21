@@ -97,7 +97,7 @@ const AgentSelection: React.FC = () => {
                   {selectedAgent.stats ? (<NumberFlow value={selectedAgent.stats[0].hs} />): ("N/A")}
                 </p>
                 <p>
-                  Winrate:{" "}
+                  WINRATE:{" "}
                   {selectedAgent.stats
                     ? (<NumberFlow value={selectedAgent.stats[0].winrate} />)
                     : ("N/A")}
