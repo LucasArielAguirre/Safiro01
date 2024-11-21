@@ -33,7 +33,7 @@ export const agentes: Agente[] = [
         kd: 1.45,
         hs: 32,
         winrate: 86,
-        hours: 10,
+        hours: 21,
         link: "https://www.youtube.com/watch?v=jf_tCPfiAj4&list=PLr5KJK8LrPy7-ggIz-etDSNGum56axm2q"
       },
     ],
