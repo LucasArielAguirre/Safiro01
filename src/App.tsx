@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/navbar';
 import Bienvenida from './components/bienvenida';
 import Challenges from './pages/challenges';
@@ -14,7 +14,8 @@ function App() {
       <Router>
         <MainContent/>
         <Analytics />
-      </Router>
+      </Router> 
+     
     </>
   )
 }
