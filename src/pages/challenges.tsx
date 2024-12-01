@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { agentes, Agente } from "../data/data"; 
 import Typewriter from "typewriter-effect";
 import NumberFlow from '@number-flow/react'
+import Atropos from "atropos/react";
 
 const AgentSelection: React.FC = () => {
   const [selectedAgent, setSelectedAgent] = useState<Agente | null>(null);
@@ -62,74 +63,99 @@ const AgentSelection: React.FC = () => {
           </motion.div>
         ))}
       </motion.div>
-
       <article className="flex-1 p-6 m-auto justify-center align-middle items-center font-textbask overflow-hidden">
         {selectedAgent ? (
-          <div className="bg-zinc-950 border border-white p-6 rounded-xl shadow-lg text-white text-center font-textbask">
-            <h2 className="text-3xl font-bold mb-6 uppercase">
-              Estadísticas con <span className="text-purple-600">{selectedAgent.name}</span>
-            </h2>
-            <div className="flex flex-col md:flex-row items-center md:space-x-8">
-              <img
-                src={selectedAgent.stats ? selectedAgent.stats[0].img_agent : ""}
-                alt={selectedAgent.name}
-                className="w-[170px] h-[370px] object-cover rounded-lg border border-gray-300/30"
-              />
-              <div className="mt-4 md:mt-0 text-left">
-                <p className="text-xl">
-                  Nombre de la cuenta:{" "}
-                  {selectedAgent.stats
-                    ? selectedAgent.stats[0].nameaccount
-                    : "N/A"}
-                </p>
-                <p>
-                  W/L:{" "}
-                  {selectedAgent.stats
-                    ? selectedAgent.stats[0].winandloss
-                    : "N/A"}
-                </p>
-                <p>
-                  K/D:{" "}
-                  {selectedAgent.stats ? ( <NumberFlow value={selectedAgent.stats[0].kd} />): ("N/A")}
-                </p>
-                <p>
-                  HS:{" "}
-                  {selectedAgent.stats ? (<NumberFlow value={selectedAgent.stats[0].hs} />): ("N/A")}
-                </p>
-                <p>
-                  WINRATE:{" "}
-                  {selectedAgent.stats
-                    ? (<NumberFlow value={selectedAgent.stats[0].winrate} />)
-                    : ("N/A")}
-                  %
-                </p>
-                <p>
-                  HORAS JUGADAS:{" "}
-                     {selectedAgent.stats ? (
-                    <NumberFlow value={selectedAgent.stats[0].hours} />
-                  ) : (
-                    "N/A"
-                  )}
-                </p>
-                <p className="">
-                  PLAYLIST COMPLETA DEL SPEEDRUN:
-                  <a
-                    target="_blank"
-                    referrerPolicy="no-referrer"
-                    className="text-purple-500 hover:text-purple-800 transition-all animate-pulse delay-200"
-                    href={
-                      selectedAgent.stats
-                        ? selectedAgent.stats[0].link
-                        : "N/A"
-                    }
-                  >
-                    {" "}
-                    CLICK AQUI 👈🏻
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+          <Atropos
+            activeOffset={10}
+            rotateXMax={15}
+            rotateYMax={20}
+            duration={400}
+            commonOrigin={true}
+            className=""
+          >
+         <div
+  className="bg-zinc-950 border border-white p-6 rounded-xl shadow-lg text-white font-textbask flex flex-col md:flex-row items-center md:items-start md:space-x-8"
+  data-atropos-offset="1"
+>
+  <div
+    className="w-full md:w-1/3 flex justify-center items-center mb-4 md:mb-0"
+    data-atropos-offset="0"
+  >
+    <img
+      src={selectedAgent.stats ? selectedAgent.stats[0].img_agent : ""}
+      alt={selectedAgent.name}
+      className="w-[200px] h-[400px] object-cover rounded-lg border border-gray-300/30"
+      data-atropos-offset="4"
+    />
+  </div>
+  <div
+    className="w-full md:w-2/3 text-left space-y-4"
+    data-atropos-offset="0"
+  >
+    <h2 className="text-3xl font-bold text-center md:text-left mb-6 uppercase">
+      Estadísticas con <span className="text-purple-600">{selectedAgent.name}</span>
+    </h2>
+    <p className="text-xl">
+      Nombre de la cuenta:{" "}
+      {selectedAgent.stats
+        ? selectedAgent.stats[0].nameaccount
+        : "N/A"}
+    </p>
+    <p>W/L: {selectedAgent.stats ? selectedAgent.stats[0].winandloss : "N/A"}</p>
+    <p>
+      K/D:{" "}
+      {selectedAgent.stats ? (
+        <NumberFlow value={selectedAgent.stats[0].kd} />
+      ) : (
+        "N/A"
+      )}
+    </p>
+    <p>
+      HS:{" "}
+      {selectedAgent.stats ? (
+        <NumberFlow value={selectedAgent.stats[0].hs}/>
+      ) : (
+        "N/A"
+      )}
+      %
+    </p>
+    <p>
+      WINRATE:{" "}
+      {selectedAgent.stats ? (
+        <NumberFlow value={selectedAgent.stats[0].winrate} />
+      ) : (
+        "N/A"
+      )}
+      %
+    </p>
+    <p>
+      HORAS JUGADAS:{" "}
+      {selectedAgent.stats ? (
+        <NumberFlow value={selectedAgent.stats[0].hours} />
+      ) : (
+        "N/A"
+      )} 
+    </p>
+    <p
+      className="mt-6 text-center md:text-left"
+    >
+      PLAYLIST COMPLETA DEL SPEEDRUN:
+      <a
+        target="_blank"
+        referrerPolicy="no-referrer"
+        className="text-purple-800 hover:text-purple-600 transition-all ml-2 gap-2"
+        href={
+          selectedAgent.stats
+            ? selectedAgent.stats[0].link
+            : "N/A"
+        }
+      >
+        <strong className="hover:underline decoration-purple-700">CLICK AQUI</strong> <span className="animate-pulse delay-200">👈🏻</span>
+      </a>
+    </p>
+  </div>
+</div>
+          </Atropos>
         ) : (
           <div className="text-center text-gray-400">
             <p className="text-2xl font-textbask">
@@ -141,7 +167,6 @@ const AgentSelection: React.FC = () => {
         autoStart: true,
         loop: true,
         delay: 45,
-
       }}
     />
             </p>
