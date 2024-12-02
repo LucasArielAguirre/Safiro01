@@ -52,7 +52,7 @@ const AgentSelection: React.FC = () => {
             flex items-center justify-center rounded-lg ${
               agent.speedrun
                 ? "bg-opacity-60 border-blue-400 hover:border-blue-300 shadow-md"
-                : "bg-opacity-50 border-gray-600 grayscale opacity-50 cursor-not-allowed"
+                : "bg-opacity-50 border-gray-600 grayscale  opacity-50 cursor-not-allowed"
             }`}
           >
             <img
