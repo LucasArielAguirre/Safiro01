@@ -125,13 +125,13 @@ const TiltedCard: React.FC<TiltedCardProps> = ({
           }}
         />
 
-        {displayOverlayContent && overlayContent && (
-          <motion.div
-            className="absolute top-0 left-0 z-[2] will-change-transform [transform:translateZ(30px)]"
-          >
-            {overlayContent}
-          </motion.div>
-        )}
+{displayOverlayContent && overlayContent && (
+  <motion.div
+    className="absolute top-0 left-0 z-[2] flex items-center justify-center w-full h-full will-change-transform [transform:translateZ(30px)]"
+  >
+    {overlayContent}
+  </motion.div>
+)}
       </motion.div>
 
       {showTooltip && (

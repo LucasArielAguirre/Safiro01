@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import Typewriter from "typewriter-effect";
-import Atropos from "atropos/react";
+import TiltedCard from "./TiltedCard";
 
 const Bienvenida = () => {
   return (
@@ -242,32 +242,31 @@ const Bienvenida = () => {
               </a>
             </div>
           </motion.div>
-          <Atropos
-            activeOffset={30}
-            rotateXMax={15}
-            rotateYMax={15}
-            duration={400}
-            commonOrigin={true}
-            className="atropos-container relative col-span-4 h-[300px] w-full bg-transparent rounded-lg overflow-hidden transition-transform duration-300"
+
+          <Link
+            to="/challenges"
+            className="relative col-span-4 h-[300px] w-full bg-transparent rounded-lg overflow-hidden transition-transform duration-300 justify-center items-center flex -mt-4"
           >
-            <Link
-              to="/challenges"
-              className="relative flex flex-col items-center justify-center w-full h-full p-6 shadow-lg rounded-lg overflow-hidden"
-            >
-              <img
-                data-atropos-offset="5"
-                src="/jett.jpg"
-                alt="Jett"
-                className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-500"
-              />
-              <h3
-                data-atropos-offset="30"
-                className="relative z-10 text-5xl font-textbask text-black text-center underline"
-              >
-                SPEEDRUNS
-              </h3>
-            </Link>
-          </Atropos>
+            <TiltedCard
+              imageSrc="jett.jpg"
+              altText="Ver challenges"
+              captionText="Ver challenges"
+              containerHeight="250px"
+              containerWidth="600px"
+              imageHeight="250px"
+              imageWidth="500px"
+              rotateAmplitude={12}
+              scaleOnHover={1.05}
+              showMobileWarning={false}
+              showTooltip={true}
+              displayOverlayContent={true}
+              overlayContent={
+                <p className="tilted-card-demo-text font-textbask bg-black bg-opacity-50 text-white text-center p-2 rounded-lg">
+                  VER CHALLENGES
+                </p>
+              }
+            />
+          </Link>
         </motion.div>
       </AnimatePresence>
     </motion.section>
