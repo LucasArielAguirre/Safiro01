@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { agentes, Agente } from "../data/data"; 
 import Typewriter from "typewriter-effect";
 import NumberFlow from '@number-flow/react'
-import Atropos from "atropos/react";
+
 
 const AgentSelection: React.FC = () => {
   const [selectedAgent, setSelectedAgent] = useState<Agente | null>(null);
