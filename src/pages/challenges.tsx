@@ -26,14 +26,14 @@ const AgentSelection: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen w-full md:w-auto overflow-hidden ">
-      <h1 className="absolute font-textbask text-center justify-center align-middle w-full text-xl md:text-5xl text-gray-100 font-extralight underline decoration-double decoration-purple-700 ">
+    <div className="flex flex-col md:flex-row min-h-screen w-full md:w-auto overflow-hidden bg-[url('/omen4k.png')]  bg-cover bg-center bg-no-repeat">
+      <h1 className="absolute font-textbask text-center justify-center align-middle w-full text-xl md:text-5xl text-white font-extralight underline decoration-purple-700/30 ">
         SPEEDRUNS CON AGENTES
       </h1>
 
       <motion.div 
-        className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3 p-4 w-[80%] 
-        md:w-2/5 lg:w-1/3 bg-zinc-900 backdrop-blur-lg shadow-lg 
+        className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-3 p-6 w-[80%] 
+        md:w-2/5 lg:w-1/3 bg-zinc-900/50 backdrop-blur-lg shadow-lg 
         md:m-10 lg:m-16 shadow-black rounded-2x justify-center items-center align-middle m-auto"
       >
         {agentes.map((agent) => (
@@ -65,16 +65,10 @@ const AgentSelection: React.FC = () => {
       </motion.div>
       <article className="flex-1 p-6 m-auto justify-center align-middle items-center font-textbask overflow-hidden">
         {selectedAgent ? (
-          <Atropos
-            activeOffset={10}
-            rotateXMax={15}
-            rotateYMax={20}
-            duration={400}
-            commonOrigin={true}
-            className=""
+          <div
           >
          <div
-  className="bg-zinc-950 border border-white p-6 rounded-xl shadow-lg text-white font-textbask flex flex-col md:flex-row items-center md:items-start md:space-x-8"
+  className="bg-zinc-950/90 border border-white/40 p-6 rounded-xl shadow-lg text-white font-textbask flex flex-col md:flex-row items-center md:items-start md:space-x-8"
   data-atropos-offset="1"
 >
   <div
@@ -155,7 +149,7 @@ const AgentSelection: React.FC = () => {
     </p>
   </div>
 </div>
-          </Atropos>
+          </div>
         ) : (
           <div className="text-center text-gray-400">
             <p className="text-2xl font-textbask">

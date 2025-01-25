@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import Typewriter from "typewriter-effect";
 import TiltedCard from "./TiltedCard";
+import BlurText from "./TextBlur";
 
 const Bienvenida = () => {
   return (
@@ -15,7 +16,7 @@ const Bienvenida = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2 }}
-            className="col-span-4 md:col-span-4 h-40 md:h-56 rounded-lg flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-lg shadow-md shadow-purple-500 border border-white/20"
+            className="col-span-4 md:col-span-4 h-40 md:h-56 rounded-lg flex items-center justify-center bg-black bg-opacity-30 backdrop-blur-lg shadow-md shadow-purple-100 border border-white/20"
             style={{
               backgroundImage: "url(banner.jpeg)",
               backgroundSize: "cover",
@@ -30,11 +31,16 @@ const Bienvenida = () => {
             drag="x"
             dragConstraints={{ left: 0, right: 300 }}
             transition={{ duration: 0.5 }}
-            className="h-56 overflow-x-hidden col-span-2 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/10 shadow-black"
+            className="h-56 overflow-x-hidden col-span-2 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/20 shadow-black"
           >
-            <h2 className="text-lg mt-2 font-textbask text-center uppercase text-purple-500">
-              Streamer De Valorant
-            </h2>
+
+            <BlurText
+              text="Streamer de valorant"
+              delay={100}
+              animateBy="words"
+              direction="top"
+              className="text-lg mt-2 font-textbask text-center uppercase text-purple-500"
+            />
             <p className="text-sm md:text-base text-gray-400 mt-2 font-textbask">
               <Typewriter
                 options={{
@@ -56,19 +62,27 @@ const Bienvenida = () => {
             drag="x"
             dragConstraints={{ left: -300, right: 0 }}
             transition={{ duration: 0.5 }}
-            className="overflow-x-hidden col-span-2 bg-blue-600 bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/10 shadow-black"
+            className="overflow-x-hidden col-span-2 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex justify-center items-center border border-white/20 shadow-black"
           >
-            <h1 className="text-4xl font-bold text-white text-center font-textbask">
-              Safiro01
-            </h1>
-            <div className="w-full flex justify-center">
-              <img
-                src="/stream.gif"
-                alt="Stream GIF"
-                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 max-w-full h-auto"
-              />
-            </div>
+            <a
+              href="https://www.twitch.tv/safiro01"
+              className="w-full h-full flex flex-col justify-center items-center shadow-2xl shadow-black bg-[url('/bg-light.jpg')] bg-contain bg-center opacity-70 bg-no-repeat rounded-lg z-10 hover:scale-105 trnasition-all duration-300"
+            >
+              
+              
+              <h1 className="text-4xl font-bold text-white text-center font-textbask">
+                Safiro01
+              </h1>
+              <div className="w-full flex justify-center">
+                <img
+                  src="/stream.gif"
+                  alt="Stream GIF"
+                  className="w-full sm:w-1/2 md:w-2/3 lg:w-2/4 xl:w-3/6 max-w-full h-auto bg-white rounded-full "
+                />
+              </div>
+            </a>
           </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -77,7 +91,7 @@ const Bienvenida = () => {
             drag="x"
             dragConstraints={{ right: 0, left: 0 }}
             transition={{ duration: 0.5 }}
-            className="col-span-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/10 shadow-black"
+            className="col-span-4 bg-black bg-opacity-20 backdrop-blur-md rounded-lg p-6 shadow-md flex flex-col justify-center border border-white/20 shadow-black"
           >
             <h3 className="text-lg font-semibold mb-4 font-textbask text-center text-white">
               REDES
@@ -249,8 +263,8 @@ const Bienvenida = () => {
           >
             <TiltedCard
               imageSrc="jett.jpg"
-              altText="Ver challenges"
-              captionText="Ver challenges"
+              altText="Ver challenges de Safiro01"
+              captionText="Ver challenges de Safiro01"
               containerHeight="250px"
               containerWidth="600px"
               imageHeight="250px"
