@@ -26,7 +26,7 @@ const AgentSelection: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen w-full md:w-auto overflow-hidden bg-[url('/omen4k.png')]  bg-cover bg-center bg-no-repeat">
+    <div className="flex flex-col md:flex-row min-h-screen w-full md:w-auto overflow-hidden bg-[url('/omen4k.webp')]  bg-cover bg-center bg-no-repeat">
       <h1 className="absolute font-textbask text-center justify-center align-middle w-full text-xl md:text-5xl text-white font-extralight underline decoration-purple-700/30 ">
         SPEEDRUNS CON AGENTES
       </h1>
